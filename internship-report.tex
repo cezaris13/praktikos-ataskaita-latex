@@ -1,23 +1,42 @@
-\documentclass[a4paper,12pt]{extarticle}
-\usepackage[L7x]{fontenc}
-%%\usepackage[utf8]{inputenc} %% disabled for we should be using xetex
-\usepackage{amsmath}
-\usepackage{verbatim}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
+\documentclass{VUMIFPSPraktika}
 \usepackage{float}
-\usepackage{internship-report}
+\usepackage{hyperref}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{biblatex}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{multirow}
 
-\author{Vardenis Pavardenis}
-\title{Į darną ir aukštą pasiekiamumą orientuotos architektūros
-  kūrimas debesų kompiuterijos platformose}
-\englishtitle{Designing for consistency and availability in cloud
-  based platforms}
+% Kableliams skaičiuose
+\usepackage{icomma}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+
+\pgfplotsset{compat=newest}
+
+\bibliography{bibliografija}
+
 \paper{Praktikos ataskaita}
-\department{Programų Sistemų katedra}
-\supervisor{Prof. V. Pavardenis}
-\date{Vilnius, 2013}
+\author{Pijus Petkevičius}
+\title{Mobiliosios programėlės funkcionalumo kūrimas ir tobulinimas}
+\englishtitle{Mobile application functionality implementation and refinement}
+\department{Programų sistemų bakalauro studijų programa}
+\universitysupervisor{Irus Grinis}
+\organisationsupervisor{Vyr. programinės įrangos inžinierius Vytauras Juozas Barkauskas}
+\date{Vilnius, \the\year}
 
 \begin{document}
 
@@ -25,12 +44,55 @@
 
 \tableofcontents
 
-\input{chapters/content}
+\sectionnonum{Įvadas}
+% Įvadas. Išdėstomi praktikos vietos pasirinkimo motyvai, praktikos užduotis, jos tikslas, spręstieji uždaviniai, pateikiama praktinės veiklos planas praktikos atlikimo eiga (2-3 psl.).
+Praktiką atlikau įmonėje \enquote{Devbridge}. Šią įmonę pasirinkau todėl, kad joje organizuojama \enquote{Sourcery} akademija, kuri padeda įeiti į WEB aplikacijų kūrimo rinką. Akademijos metu studentai ne tik kuria WEB aplikaciją, sprendžiančią tikrą vartotojų problemą, bet ir įgyja pagrindus poroje populiarių technologijų, naudojamų šioje srityje.
+\bigskip
 
-\listoffigures
+Šios praktikos \textbf{tikslas} -- 
+\bigskip
 
-\appendix
+Šios praktikos \textbf{uždaviniai}:
+\begin{enumerate}
+    \item Įgyti žinių apie WEB aplikacijų kūrime naudojamas technologijas (TypeScript, Java, PostgreSQL) ir karkasus (React, Spring Framework).
+    \item Sukurti WEB aplikaciją, skirtą organizacijos darbuotojų registracijai sveikatos paslaugoms.
+    \item Išmokti dirbti su kitais programuotojais naudojantis versijų kontrolės sistema.
+    \item Susipažinti su darbo komandoje procesais ir Agile metodologija.
+    \item Pademonstruoti sukurtos WEB aplikacijos veikimą organizacijos darbuotojams.
+\end{enumerate}
+\bigskip
 
-\input{chapters/appendix}
+Praktika truko 11 savaičių, ją atlikau 2022-09-29 -- 2022-12-15.
+
+Šio darbo pirmajame skyriuje aprašoma įmonė \enquote{Devbridge}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos. Antrajame skyriuje aprašoma praktikos veikla -- tai, kokia buvo užduotis ir kaip ji įgyvendinta. Trečiajame skyriuje pateikiami praktikos darbo rezultatai ir išvados, privalumai ir trūkumai, įgytos žinios bei rekomendacijos universitetui ir organizacijai.
+
+\section{Įmonės apibūdinimas}
+Šiame skyriuje aprašoma įmonė \enquote{Devbridge}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos.
+% Įmonės/įstaigos apibūdinimas. Glaustai aprašoma įmonė/įstaiga, kurioje buvo atlikta praktika: jos veiklos sritis, organizacinė struktūra, teikiamos paslaugos ir kt. Apibūdinamos praktikos vietoje sudarytos darbo sąlygos (1-2 psl.).
+\subsection{Įmonės veiklos sritis}
+\enquote{Devbridge} įsikūrė 2008 metais 
+\subsection{Įmonės organizacinė struktūra}
+\subsection{Įmonės sudarytos darbo sąlygos}
+
+\section{Praktikos veiklos aprašymas}
+% Praktikos veiklos aprašymas (vienas arba keli skyriai). Aprašomas praktikos užduoties įgyvendinimas (pvz., atlikti projektavimo ir/ar programavimo darbai, sukurtas modelis, priimti sprendimai ir pan.).
+\subsection{Praktikos veiklos aprašymas}
+\subsection{Praktikos užduoties įgyvendinimas}
+
+\section{Rezultatai, išvados ir pasiūlymai}
+% Rezultatai, išvados ir pasiūlymai. Išdėstomi pagrindiniai darbo rezultatai ir išvados, praktikos darbo privalumai ir trūkumai, aprašomos įgytos žinios ir patirtis praktikos metu, duodamas universitete įgytų žinių atitikimo praktikos užduočiai atlikti įvertinimas, pateikiami argumentuoti pasiūlymai, kaip geriau organizuoti darbo ir valdymo procesus praktikos atlikimo vietoje ir mokymą Universitete (1-2 psl.).
+\subsection{Darbo rezultatai ir išvados}
+\subsection{Praktikos darbo privalumai ir trūkumai}
+\subsection{Įgytos žinios ir patirtis praktikos metu}
+Įgyta patirtis, kompetencijos ir gebėjimai:
+\begin{itemize}
+    \item Įgyta žinių apie technologijas ir karkasus ir išmokta juos taikyti kuriant WEB aplikacijas.
+    \item Įgyta patirties programuojant priekinę ir galinę WEB aplikacijos dalis.
+    \item Įgyta patirties atlikti kodo peržiūras kitiems programuotojams ir pagerinti versijų kontrolės sistemos Git naudojimosi gebėjimai.
+    \item Lavinau darbo komandoje gebėjimus ir kaip dalyvauti Scrum ceremonijose.
+\end{itemize}
+
+\subsection{Pasiūlymai įmonei}
+\subsection{Pasiūlymai universitetui}
 
 \end{document}
