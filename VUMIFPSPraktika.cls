@@ -186,7 +186,7 @@
         \end{tabularx}
         \vskip 2cm
         \begin{tabularx}{\textwidth}{ Xl X }
-          Praktikos institucija: & \@placeholder[Devbridge LT, UAB]{(organizacijos pavadinimas)} \\
+          Praktikos institucija: & \@placeholder[Bentley systems]{(organizacijos pavadinimas)} \\
           \hfill \\
           Organizacijos praktikos vadovas: & \@placeholder[\@organisationsupervisor]{(pareigos,
             vardas, pavardė)} \\

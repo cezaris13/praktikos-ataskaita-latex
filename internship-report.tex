@@ -34,43 +34,43 @@
 \title{Mobiliosios programėlės funkcionalumo kūrimas ir tobulinimas}
 \englishtitle{Mobile application functionality implementation and refinement}
 \department{Programų sistemų bakalauro studijų programa}
-\universitysupervisor{Irus Grinis}
-\organisationsupervisor{Vyr. programinės įrangos inžinierius Vytauras Juozas Barkauskas}
+\universitysupervisor{Lect. Irus Grinis}
+\organisationsupervisor{\parbox{\linewidth}{\raggedright
+Vyr. programinės įrangos inžinierius Vytautas Juozas Barkauskas}}
 \date{Vilnius, \the\year}
 
 \begin{document}
 
-\maketitle
-
+\maketitle––≠≠
 \tableofcontents
 
 \sectionnonum{Įvadas}
 % Įvadas. Išdėstomi praktikos vietos pasirinkimo motyvai, praktikos užduotis, jos tikslas, spręstieji uždaviniai, pateikiama praktinės veiklos planas praktikos atlikimo eiga (2-3 psl.).
-Praktiką atlikau įmonėje \enquote{Devbridge}. Šią įmonę pasirinkau todėl, kad joje organizuojama \enquote{Sourcery} akademija, kuri padeda įeiti į WEB aplikacijų kūrimo rinką. Akademijos metu studentai ne tik kuria WEB aplikaciją, sprendžiančią tikrą vartotojų problemą, bet ir įgyja pagrindus poroje populiarių technologijų, naudojamų šioje srityje.
+Praktiką atlikau įmonėje \enquote{Bentley systems}. Šią įmonę pasirinkau todėl, kad joje organizuojama rotacijų programa, kuri leidžia išbandyti įvairias technologijas, kiekvienos rotacijos metu. Programinės įrangos inžinieriai skatinami rinktis kuo įvairesnes technologijas, kad pasibaigus rotacijos periodui, inžinierius galėtų dirbti jam labiausiai patikusioje komandoje su mėgstamomis technologijomis.
 \bigskip
 
-Šios praktikos \textbf{tikslas} -- 
+Šios praktikos \textbf{tikslas} - mobiliosios programėlės funkcionalumo kūrimas ir tobulinimas.
 \bigskip
 
 Šios praktikos \textbf{uždaviniai}:
 \begin{enumerate}
-    \item Įgyti žinių apie WEB aplikacijų kūrime naudojamas technologijas (TypeScript, Java, PostgreSQL) ir karkasus (React, Spring Framework).
-    \item Sukurti WEB aplikaciją, skirtą organizacijos darbuotojų registracijai sveikatos paslaugoms.
-    \item Išmokti dirbti su kitais programuotojais naudojantis versijų kontrolės sistema.
-    \item Susipažinti su darbo komandoje procesais ir Agile metodologija.
-    \item Pademonstruoti sukurtos WEB aplikacijos veikimą organizacijos darbuotojams.
+    \item Pagilinti Kotlin programavimo kalbos žinias rašant programinį kodą.
+    \item Išmokti naudotis “Jetpack Compose” Android įrankių rinkiniu skirtu kurti vartotojo sąsają.
+    \item Susipažinti su lanksčiojo programavimo projektų valdymo metodu “Kanban”.
+    \item Susipažinti su švaraus ir kokybiško kodo rašymo principais ir geriausiomis praktikomis. 
+    \item Įgyvendinti naują funkcionalumą Android programėlėje.
 \end{enumerate}
 \bigskip
 
-Praktika truko 11 savaičių, ją atlikau 2022-09-29 -- 2022-12-15.
+Praktika truko 10-11 savaičių, ją atlikau 2024-02-05 -- 2022-04-15.
 
-Šio darbo pirmajame skyriuje aprašoma įmonė \enquote{Devbridge}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos. Antrajame skyriuje aprašoma praktikos veikla -- tai, kokia buvo užduotis ir kaip ji įgyvendinta. Trečiajame skyriuje pateikiami praktikos darbo rezultatai ir išvados, privalumai ir trūkumai, įgytos žinios bei rekomendacijos universitetui ir organizacijai.
+Šio darbo pirmajame skyriuje aprašoma įmonė \enquote{Bentley systems}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos. Antrajame skyriuje aprašoma praktikos veikla -- tai, kokia buvo užduotis ir kaip ji įgyvendinta. Trečiajame skyriuje pateikiami praktikos darbo rezultatai ir išvados, privalumai ir trūkumai, įgytos žinios bei rekomendacijos universitetui ir organizacijai.
 
 \section{Įmonės apibūdinimas}
-Šiame skyriuje aprašoma įmonė \enquote{Devbridge}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos.
+Šiame skyriuje aprašoma įmonė \enquote{Bentley systems}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos.
 % Įmonės/įstaigos apibūdinimas. Glaustai aprašoma įmonė/įstaiga, kurioje buvo atlikta praktika: jos veiklos sritis, organizacinė struktūra, teikiamos paslaugos ir kt. Apibūdinamos praktikos vietoje sudarytos darbo sąlygos (1-2 psl.).
 \subsection{Įmonės veiklos sritis}
-\enquote{Devbridge} įsikūrė 2008 metais 
+\enquote{Bentley systems} įsikūrė 1984 metais 
 \subsection{Įmonės organizacinė struktūra}
 \subsection{Įmonės sudarytos darbo sąlygos}
 
@@ -86,10 +86,11 @@ Praktika truko 11 savaičių, ją atlikau 2022-09-29 -- 2022-12-15.
 \subsection{Įgytos žinios ir patirtis praktikos metu}
 Įgyta patirtis, kompetencijos ir gebėjimai:
 \begin{itemize}
-    \item Įgyta žinių apie technologijas ir karkasus ir išmokta juos taikyti kuriant WEB aplikacijas.
-    \item Įgyta patirties programuojant priekinę ir galinę WEB aplikacijos dalis.
-    \item Įgyta patirties atlikti kodo peržiūras kitiems programuotojams ir pagerinti versijų kontrolės sistemos Git naudojimosi gebėjimai.
-    \item Lavinau darbo komandoje gebėjimus ir kaip dalyvauti Scrum ceremonijose.
+    \item Įgyta patirties rašant programinį kodą Kotlin programavimo kalba.
+    \item Įgyta žinių apie “Jetpack Compose” Android įrankių rinkiniu skirtu kurti vartotojo sąsają.
+    \item Lavinau darbo komandoje gebėjimus ir darbo "Kanban" projektų valdymo metodo pagalba.
+    \item Įgyta patirties rašant kodą su švaraus ir kokybiškorašymo principais ir geriausiomis praktikomis. 
+    \item Įgyvendintas naujas funkcionalumas Android programėlėje.
 \end{itemize}
 
 \subsection{Pasiūlymai įmonei}
