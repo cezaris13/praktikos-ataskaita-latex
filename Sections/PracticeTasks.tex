@@ -9,8 +9,7 @@ Pirmoji darbo diena prasidėjo nuo terminuotos sutarties pasirašymo. Po to supa
 % Praktikos veiklos aprašymas (vienas arba keli skyriai). Aprašomas praktikos užduoties įgyvendinimas (pvz., atlikti projektavimo ir/ar programavimo darbai, sukurtas modelis, priimti sprendimai ir pan.).
 \subsection{Praktikos užduotys}
 
-Šiame poskyryje pateiktos visos užduotys, kurios buvo atliktos praktikos metu. Kiekviena užduotis bus trumpai apibūdinta, įvardinant jos tikslą, naudotus metodus ir pasiektus rezultatus.
-Reikalavimai atliekant užduotį:
+Šiame poskyryje pateiktos visos užduotys, kurios buvo atliktos praktikos metu. Kiekviena užduotis bus trumpai apibūdinta, įvardinant jos tikslą, įgyvendinimo būdus ir pasiektus rezultatus mobiliojoje programėlėje.
 
 \subsubsection{Tap to fullscreen on iOS}
 
@@ -145,7 +144,7 @@ Reikalavimai atliekant užduotį:
         \item Tokios pačios žinutės nerodomos 2 kartus.
     \end{enumerate}
 \end{enumerate}
-\bigskip
+\newpage
 Iš pradžių buvo sukurtas iššokančios žinutės komponentas (\ref{fig:pill} paveikslėlis). Komponentui pritaikytos gestų atpažinimo, paspaudimo funkcionalumas, teksto sutrumpinimas (\ref{fig:pillCode} paveikslėlis).
 
 \begin{figure}[htbp!]
@@ -228,7 +227,7 @@ class ToastViewModel : ViewModel() {
 \end{figure}
 
 \newpage
-Buvo sukurtas \enquote{ToastHost}, skirtas tvarkingai, su animacijomis parodyti iššokančias žinutes  (\ref{fig:ToastHost} paveikslėlis).
+Buvo sukurtas \enquote{ToastHost}, skirtas tvarkingai, su animacijomis parodyti iššokančias žinutes  (\ref{fig:ToastHost} paveikslėlis). Panaudota 1,5 konstanta, kad paslėpti iššokančią žinutę, kai kyla į viršų už navigacijos juostos. Standumo ir kiti animacijos parametrai parinkti, kad kuo labiau atitiktų Figma maketų animacijas.
 
 \begin{figure}[htbp!]
     \centering
@@ -260,7 +259,7 @@ AnimatedVisibility(
 \end{figure}
 
 \newpage
-Kadangi \enquote{Jetpack Compose} komponentų tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Galutinį rezultatą galima matyti \ref{fig:modelToastView} paveikslėlyje.
+Kadangi \enquote{Jetpack Compose} komponentų tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Kadangi programėlė yra suprogramuota naudojantis daug fragmentų ir 1 \textit{activity}, iššokančios žinutės matysis visoje programėlėje. Galutinį rezultatą galima matyti \ref{fig:modelToastView} paveikslėlyje.
 
 \begin{figure}[htbp!]
     \centering
