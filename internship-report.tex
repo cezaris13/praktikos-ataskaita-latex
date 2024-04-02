@@ -19,81 +19,112 @@
 \usepackage{booktabs}
 \usepackage{pgfplots}
 \usepackage{multirow}
-
-% Kableliams skaičiuose
+\usepackage{minted}
 \usepackage{icomma}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker={,}}
-
 \pgfplotsset{compat=newest}
 
 \bibliography{bibliografija}
 
-\paper{Praktikos ataskaita}
-\author{Pijus Petkevičius}
-\title{Mobiliosios programėlės funkcionalumo kūrimas ir tobulinimas}
-\englishtitle{Mobile application functionality implementation and refinement}
-\department{Programų sistemų bakalauro studijų programa}
-\universitysupervisor{Lect. Irus Grinis}
-\organisationsupervisor{\parbox{\linewidth}{\raggedright
-Vyr. programinės įrangos inžinierius Vytautas Juozas Barkauskas}}
-\date{Vilnius, \the\year}
-
+\input{Sections/Title}
 \begin{document}
 
-\maketitle––≠≠
+\maketitle
 \tableofcontents
 
-\sectionnonum{Įvadas}
-% Įvadas. Išdėstomi praktikos vietos pasirinkimo motyvai, praktikos užduotis, jos tikslas, spręstieji uždaviniai, pateikiama praktinės veiklos planas praktikos atlikimo eiga (2-3 psl.).
-Praktiką atlikau įmonėje \enquote{Bentley systems}. Šią įmonę pasirinkau todėl, kad joje organizuojama rotacijų programa, kuri leidžia išbandyti įvairias technologijas, kiekvienos rotacijos metu. Programinės įrangos inžinieriai skatinami rinktis kuo įvairesnes technologijas, kad pasibaigus rotacijos periodui, inžinierius galėtų dirbti jam labiausiai patikusioje komandoje su mėgstamomis technologijomis.
-\bigskip
+\input{Sections/Intro}
+\input{Sections/Company}
+\input{Sections/PracticeTasks}
+\input{Sections/Technologies}
 
-Šios praktikos \textbf{tikslas} - mobiliosios programėlės funkcionalumo kūrimas ir tobulinimas.
-\bigskip
+\section{Rezultatai, išvados ir pasiūlymai}
 
-Šios praktikos \textbf{uždaviniai}:
+\textbf{Praktikos darbo privalumai}:
 \begin{enumerate}
-    \item Pagilinti Kotlin programavimo kalbos žinias rašant programinį kodą.
-    \item Išmokti naudotis “Jetpack Compose” Android įrankių rinkiniu skirtu kurti vartotojo sąsają.
-    \item Susipažinti su lanksčiojo programavimo projektų valdymo metodu “Kanban”.
-    \item Susipažinti su švaraus ir kokybiško kodo rašymo principais ir geriausiomis praktikomis. 
-    \item Įgyvendinti naują funkcionalumą Android programėlėje.
+    \item Taikomos naujos technologijos.
+    \item Galimybė laisvai rinktis norimas užduotis.
+    \item Draugiška, padedanti komanda.
 \end{enumerate}
 \bigskip
 
-Praktika truko 10-11 savaičių, ją atlikau 2024-02-05 -- 2022-04-15.
+\textbf{Praktikos darbo trūkumai}:
+\begin{enumerate}
+    \item Praktikantai dažnai jaučiasi izoliuoti vienoje komandoje, baugu susipažinti su kitais praktikantais, praktikantų susitikimai nuotoliniai, kas pasunkina socializacijos aspektą.
+\end{enumerate}
+\bigskip
 
-Šio darbo pirmajame skyriuje aprašoma įmonė \enquote{Bentley systems}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos. Antrajame skyriuje aprašoma praktikos veikla -- tai, kokia buvo užduotis ir kaip ji įgyvendinta. Trečiajame skyriuje pateikiami praktikos darbo rezultatai ir išvados, privalumai ir trūkumai, įgytos žinios bei rekomendacijos universitetui ir organizacijai.
-
-\section{Įmonės apibūdinimas}
-Šiame skyriuje aprašoma įmonė \enquote{Bentley systems}, jos veiklos sritis, organizacinė struktūra ir sudarytos darbo sąlygos.
-% Įmonės/įstaigos apibūdinimas. Glaustai aprašoma įmonė/įstaiga, kurioje buvo atlikta praktika: jos veiklos sritis, organizacinė struktūra, teikiamos paslaugos ir kt. Apibūdinamos praktikos vietoje sudarytos darbo sąlygos (1-2 psl.).
-\subsection{Įmonės veiklos sritis}
-\enquote{Bentley systems} įsikūrė 1984 metais 
-\subsection{Įmonės organizacinė struktūra}
-\subsection{Įmonės sudarytos darbo sąlygos}
-
-\section{Praktikos veiklos aprašymas}
-% Praktikos veiklos aprašymas (vienas arba keli skyriai). Aprašomas praktikos užduoties įgyvendinimas (pvz., atlikti projektavimo ir/ar programavimo darbai, sukurtas modelis, priimti sprendimai ir pan.).
-\subsection{Praktikos veiklos aprašymas}
-\subsection{Praktikos užduoties įgyvendinimas}
-
-\section{Rezultatai, išvados ir pasiūlymai}
-% Rezultatai, išvados ir pasiūlymai. Išdėstomi pagrindiniai darbo rezultatai ir išvados, praktikos darbo privalumai ir trūkumai, aprašomos įgytos žinios ir patirtis praktikos metu, duodamas universitete įgytų žinių atitikimo praktikos užduočiai atlikti įvertinimas, pateikiami argumentuoti pasiūlymai, kaip geriau organizuoti darbo ir valdymo procesus praktikos atlikimo vietoje ir mokymą Universitete (1-2 psl.).
-\subsection{Darbo rezultatai ir išvados}
-\subsection{Praktikos darbo privalumai ir trūkumai}
-\subsection{Įgytos žinios ir patirtis praktikos metu}
-Įgyta patirtis, kompetencijos ir gebėjimai:
-\begin{itemize}
+\textbf{Įgytos žinios ir patirtis praktikos metu:}
+\begin{enumerate}
     \item Įgyta patirties rašant programinį kodą Kotlin programavimo kalba.
     \item Įgyta žinių apie “Jetpack Compose” Android įrankių rinkiniu skirtu kurti vartotojo sąsają.
     \item Lavinau darbo komandoje gebėjimus ir darbo "Kanban" projektų valdymo metodo pagalba.
-    \item Įgyta patirties rašant kodą su švaraus ir kokybiškorašymo principais ir geriausiomis praktikomis. 
+    \item Įgyta patirties rašant kodą su švaraus ir kokybiško rašymo principais ir geriausiomis praktikomis. 
     \item Įgyvendintas naujas funkcionalumas Android programėlėje.
-\end{itemize}
+\end{enumerate}
+\bigskip
 
-\subsection{Pasiūlymai įmonei}
-\subsection{Pasiūlymai universitetui}
+\textbf{Pasiūlymai įmonei}:
+\begin{enumerate}
+    \item Įmonėje, šiuo metu, į praktikos pozicijas primami tik programuotojai ir testuotojai. Būtų galima išplėsti praktikos pozicijų pasirinkimą, pridedant projektų vadovo, vartotojo sąsajos dizainerių pozicijas.
+    \item Atliekant praktiką, neteko susidurti su realių programinės įrangos, funkcionalumų įvertinimo iš vartotojų pusės. Bet 2 mėnesiai, manau, yra per mažas laiko tarpas, kad įgyvendintas funkcionalumas pasiektų vartotojus.
+    \item Pirmą kartą pamačius projektą, buvo nelabai aišku, koks jo pilnas funkcionalumas, didžiąją dalį funkcionalumo atradau atliekant programinio kodo pakeitimus. Galima praktikantams, prieš pradedant rašyti kodą, pristatyti projekto funkcionalumą.
+\end{enumerate}
+% \begin{enumerate}
+%     % \item Grupinių projektinių darbų pristatymų metu per daug skiriama dėmesio sistemos funkcionalumui ir pristatymo sklandumui. Dėl to dažniausiai nukenčia sistemos testavimas -- jaunieji programuotojai nerašo testų, kadangi tai nėra vertinama pristatymo metu.
+% \end{enumerate}
 
+
+\textbf{Pasiūlymai universitetui}
+\begin{enumerate}
+    \item Praktikos metu teko dirbti prie mobiliųjų programėlių, jų funkcionalumo tobulinimo, universitete, mano žiniomis, privalomojo ar pasirenkamojo dalyko programų sistemų programoje nėra, tad būtų pravartu turėti bent vieną kursą, kuris leistų susipažinti ne tik su interneto svetainių kūrimu, bet ir su kitokia programų kūrimo paradigma.
+    \item Galimybė dirbti prie žymiai didesnio projekto. Paskaitų metu, dažniausiai dirbama prie nuo nulio kuriamų projektų, tačiau darbas prie didelės kodo bazės, kurios ankščiau studentas nematė, būtų naudinga patirtis, nes atėjus į darbovietę, studentas, dažniausiai negaus kurti projekto nuo nulio ir teks dirbti prie senesnio, ne su visomis geriausiomis programavimo praktikomis.
+    \item Pridėti vartotojo sąsajos testavimo modulį. Universitete testavimo kurse, buvo kalbama apie vienetinius, integracinius, prasiskverbimo testus, apie vartoto sąsają nebuvo užsiminta. Būtų galima supažindinti studentus su pagrindiniais mobiliųjų programėlių testavimo būdais, nes didžiąją dalį vartotojo sąsajos testavimo žinių įgavau tik praktikos metu. 
+\end{enumerate}
+
+\newpage
+
+\section{Priedai}
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/PdfTronViewController.png}
+    \caption{PdfTronViewController ekranas}
+    \label{fig:pdfViewController screen}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/SideViewPdfViewController.png}
+    \caption{PdfTronViewController dekompozicija}
+    \label{img:pdfViewController}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/annotationList.png}
+    \caption{Anotacijų sąrašo komponentas}
+    \label{img:annotationList}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/buttonsView.png}
+    \caption{Projekto mygtukų langas}
+    \label{fig:buttonsView.png}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/pillAndroid.png}
+    \caption{Iššokančios žinutės komponentas}
+    \label{fig:pill}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/toastView.jpeg}
+    \caption{Iššokančios žinutės komponento pavyzdys programėlėje}
+    \label{fig:modelToastView}
+\end{figure}
 \end{document}
+

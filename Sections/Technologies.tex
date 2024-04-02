@@ -1,0 +1,82 @@
+\newpage
+
+\subsection{Praktikos metu naudotos technologijos}
+Šiame poskyryje aprašomos technologijos, kurias naudojau praktikos metu ir pavyzdžiai, kur jos buvo naudojamos. 
+Atlikdamas praktiką mobiliųjų įrenginių kūrimo komandoje turėjau galimybę dirbti su įvairiomis pripažintomis ir naujausiomis technologijomis. Toliau aprašoma pagrindinių \enquote{Android} ir \enquote{iOS} technologijų, kuriomis naudojausi, apžvalga:
+
+Jetpack Compose yra modernus Google vartotojo sąsajų priemonių rinkinys, skirtas Android taikomųjų programų vartotojo sąsajoms kurti. Jame naudojamas deklaratyvusis metodas, kai kūrėjai aprašo norimą naudotojo sąsajos būseną, o ne tai, kaip ją pasiekti žingsnis po žingsnio. Taikant šį požiūrį kodas gali būti glaustesnis ir lengviau suprantamas.  "Jetpack Compose" naudoja "Kotlin" galimybes, todėl kūrėjai gali kurti vartotojo sąsajos komponentus kaip funkcijas.  Tai gali pagerinti kodo skaitomumą ir palaikymą.
+
+
+\subsubsection{Kotlin}
+Kotlin yra viena iš populiariausių programavimo kalbų kuriant Android mobiliąsias programėles. Lyginant su Java programavimo kalba, Kotlin yra modernesnė, null reikšmių saugumu. Kotlin lengvai pritaikoma senesniuose projektuose, parašytuose su Java ir XML vartotojo sąsaja, paprasta atnaujinti seną kodo bazę. Sintaksės panašumas į kitas programavimo kalbas, padeda lengvai ir greita išmokti Kotlin programavimo kalbos pagrindus.
+Visos praktikos metu Kotlin programavimo kalbą naudojau kurti naudotojo sąsajos logiką, tvarkyti duomenis ir integruoti naujus komponentus į turimą mobiliąją programėlę.
+
+\subsubsection{Jetpack Compose}
+
+"Jetpack Compose" yra Android rekomenduojamas modernus įrankių rinkinys, skirtas vietinei vartotojo sąsajai kurti. Rinkinys supaprastina ir pagreitina Android mobiliųjų programėlių vartotojo sąsajos kūrimą. Jame taikomas deklaratyvus metodas,
+
+% % \begin{figure}
+% %     \centering
+% %     \begin{minted}[linenos,tabsize=1,breaklines]{kotlin}
+% %     @Composable
+% %     fun TestListParameterView(
+% %         values: List<String>,
+% %         initialMessage: String = "Initial message",
+% %         labelText: String = "Label",
+% %         onRemove: (String) -> Unit,
+% %         onAdd: (String) -> Unit
+% %     ) {
+% %         var text by rememberSaveable { mutableStateOf(initialMessage) }
+% %         Column {
+% %             LazyColumn(modifier = Modifier.height(200.dp)) {
+% %                 items(items = values) { value ->
+% %                     Row {
+% %                         Text(
+% %                             modifier = Modifier.height(44.dp).fillMaxWidth(0.9f),
+% %                             maxLines = 2,
+% %                             style = MaterialTheme.typography.body2,
+% %                             text = value,
+% %                             overflow = TextOverflow.Ellipsis
+% %                         )
+% %                         Spacer(modifier = Modifier.weight(1f))
+% %                         TextButton(
+% %                             modifier = Modifier.width(44.dp).background(Color.Transparent),
+% %                             onClick = { onRemove(value) },
+% %                             content = { Icon(painter = painterResource(...)) }
+% %                         )
+% %                     }
+% %                 }
+% %             }
+% %             OutlinedTextField(
+% %                 modifier = Modifier.fillMaxWidth(),
+% %                 value = text,
+% %                 onValueChange = { text = it },
+% %                 label = { Text(labelText) }
+% %             )
+% %             Button(onClick = {
+% %                 if (text.isNotBlank()) {
+% %                     onAdd(text)
+% %                     text = ""
+% %                 }
+% %             }) { Text(text = "Add") }
+% %         }
+% %     }
+% %     \end{minted}
+% %     \caption{Jetpack Compose programinis kodas}
+% %     \label{fig:composeCode}
+% % \end{figure}
+
+% % \begin{figure}[htbp!]
+% %   \centering
+% %   \includegraphics[width=0.8\linewidth]{Images/JetpackCompose.png}
+% %   \caption{Jetpack Compose komponento peržiūra}
+% %   \label{fig:example}
+% % \end{figure}
+
+
+\subsubsection{Swift}
+Swift yra galinga, tačiau nesunki pradedantiesiems programavimo kalba, kurią Apple sukūrė savo įrenginiams. Lyginant su \enquote{Objective-C}, Swift pasižymi švariu ir glaustu stiliumi, artimesniu natūraliai kalbai. Priešingai nei \enquote{Objective-C}, Swift atlieka daugiau automatinio atminties valdymo ir tipų tikrinimo, tai padeda išvengti gedimų ir klaidų, kurios dažniau pasitaiko \enquote{Objective-C} kalboje. Dėl šių priežasčių, dėmesio, programinį kodą  greita parašyti ir lengva prižiūrėti. Nors \enquote{Objective-C} dar naudojama esamuose projektuose, integruoti Swift nesunku net ir į itin senus projektus. Su Swift programavimo kalba galima rašyti programėles iPhone, iPad, MacBook, Apple watch įrenginiams. Neseniai atsiradusiam \enquote{Apple vision pro} prietaisui irgi yra galimybė kurti programas šia programavimo kalba. 
+
+\subsubsection{SwiftUI}
+
+\enquote{SwiftUI} - tai naujas Apple karkasas įrenginių naudotojo sąsajų kūrimui. Skirtingai nuo storyboards sąsajų kūrimo, kuris remiasi vizualiniu komponentų dėliojimu ekrane, \enquote{SwiftUI} naudoja deklaratyvų požiūrį. Storyboards vartotojo sąsajos konvertuojamos į XML,  kas yra gana nepatogu, kai atliekamos programinio kodo pakeitimų peržiūros. Kaip ir \enquote{Jetpack compose}, \enquote{SwiftUI}, kode galima atlikti vartotojo sąsajos būsenų valdymą, deklaratyviai konstruoti vartotojo sąsają. Išbandžius abi technologijas iOS vartotojo sąsajos kūrimo technologijas, norint suprasti ir atlikti kodo pakeitimus esamame projekte, \enquote{SwiftUI} yra geresnis programavimo karkasas, suprasti kodo veikimo principus, prireiks mažiau laiko.
