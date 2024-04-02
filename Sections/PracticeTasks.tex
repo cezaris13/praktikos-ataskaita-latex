@@ -23,11 +23,11 @@ Reikalavimai atliekant užduotį:
         \item Komponentų paslėpimas: \enquote{PdfTron}, \enquote{Synchro field} navigacijos, statuso juosta ir apatinė anotacijų juosta turėtų būti paslėpti, kai pdf ekranas apima visą ekraną.
         \item Pdf užimti visą ekraną ir sugrįžti atgal į normalią būseną.
     \end{enumerate}
-    \item Kai anotacijų sąrašas atidarytas(telefone):
+    \item Kai anotacijų sąrašas atidarytas (telefone):
     \begin{enumerate}
         \item Turėtų elgtis taip pat, tik anotacijų sąrašas turi irgi dingti, kai Pdf ekranas užima visą ekraną.
     \end{enumerate}
-    \item Kai anotacijų sąrašas atidarytas(plančetiniame):
+    \item Kai anotacijų sąrašas atidarytas (plančetiniame):
     \begin{enumerate}
         \item Turėtų elgtis taip pat, tik šoninio anotacijų sąrašo neuždaryti.
     \end{enumerate}
@@ -77,7 +77,7 @@ extension PdfTronViewController: PdfTronNavigationControllerDelegate {
 
     
 \subsubsection{UIButton configuration}
-Ši užduotis buvo skirta perkelti didžiąją dalį mygtukų iOS projekte į FieldUIComponents projektą ir su vienodinti stilių nustatymą naudojant \enquote{UIButton.Configuration}.
+Ši užduotis buvo skirta perkelti didžiąją dalį mygtukų iOS projekte į FieldUIComponents projektą ir suvienodinti stilių nustatymą naudojant \enquote{UIButton.Configuration}.
 
 Reikalavimai atliekant užduotį:
 \begin{enumerate}
@@ -86,7 +86,7 @@ Reikalavimai atliekant užduotį:
     \item Vizualių pakeitimų neturi būti.
 \end{enumerate}
 
-Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtukai, kurie galėtų būti perkelti į FieldUIComponents projektą. Perkėlus mygtukus, pradėta perrašyti mygtukų stiliaus nustatymas su \enquote{UIButton.Configuration} (\ref{fig:Primary button} paveikslėlis). Teksto spalvos, šrifto ir dydžio nustatymas negalėjo būti perrašytas \enquote{UIButton.Configuration} pagalba, nes pakeitus mygtuko tekstą, reikšmės įgavo pradines stiliaus reikšmes. 
+Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtukai, kurie galėtų būti perkelti į FieldUIComponents projektą. Perkėlus mygtukus, buvo perrašyti jų stiliaus nustatymai su \enquote{UIButton.Configuration} (\ref{fig:Primary button} paveikslėlis). Teksto spalvos, šrifto ir dydžio nustatymas negalėjo būti perrašytas \enquote{UIButton.Configuration} pagalba, nes pakeitus mygtuko tekstą, reikšmės įgavo pradines stiliaus reikšmes. 
 
 \begin{figure}[htbp!]
     \centering
@@ -108,7 +108,7 @@ Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtuka
 \end{figure}
 
 
-Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus projekte naudojamus mygtukus (\ref{fig:buttonsView.png} paveikslėlis). Kadangi mygtukų langas parašytas su SwiftUI, o patys mygtukai su UIKit funckijomis, reikėjo sukurti\textit{ButtonViewRepresentable}, kuris pasirinktą UIView komponento klasė supakuojama į SwiftUI komponentą, realizavus \textit{UIViewRepresentable} klasės funkcijas (\ref{fig:buttonViewRepresentable} paveikslėlis).
+Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus projekte naudojamus mygtukus (\ref{fig:buttonsView.png} paveikslėlis). Kadangi mygtukų langas parašytas su SwiftUI, o patys mygtukai su UIKit funckijomis, reikėjo sukurti \textit{ButtonViewRepresentable}, kuris pasirinktą UIView komponento klasė supakuojama į SwiftUI komponentą, realizavus \textit{UIViewRepresentable} klasės funkcijas (\ref{fig:buttonViewRepresentable} paveikslėlis).
 
 \begin{figure} [htbp!]
     \centering
@@ -136,7 +136,7 @@ Reikalavimai atliekant užduotį:
             \item Komponento animacija turi kiek galima daugiau sutapti su maketo animacijomis.
         \end{enumerate}
         \item Iššokančios žinutės animacijos trukmė - 3 sekundės.
-        \item Iššokanti žinutė galima paslėpti paspaudus ant jos ar atlikus tempimo į viršų gestą.
+        \item Iššokančią žinutę galima paslėpti paspaudus ant jos ar atlikus tempimo į viršų gestą.
     \end{enumerate}
     \item Iššokančių žinučių eilė:
     \begin{enumerate}
@@ -187,7 +187,7 @@ fun Pill(
     \label{fig:pillCode}
 \end{figure}
 \newpage
-Sukurtas \enquote{ToastViewModel}, kuris rūpinasi iššokančių žinučių eile, patikrina eilėje esančias žinutes, jei eilėje egzistuoja žinutė, antrą kartą jos neparodys (\ref{fig:ToastViewModel} paveikslėlis). Taip pat galima pateikti žinutės trukmę. pasibaigus trukmei, žinutė išmetama iš eilės.
+Sukurtas \enquote{ToastViewModel}, kuris rūpinasi iššokančių žinučių eile, patikrina eilėje esančias žinutes, jei eilėje egzistuoja žinutė, antrą kartą jos neparodys (\ref{fig:ToastViewModel} paveikslėlis). Taip pat galima pateikti žinutės trukmę. Pasibaigus trukmei, žinutė išmetama iš eilės.
 
 \begin{figure}[htbp!]
     \centering
@@ -227,7 +227,7 @@ class ToastViewModel : ViewModel() {
 \end{figure}
 
 \newpage
-Buvo sukurtas \enquote{ToastHost}, skirtas tvarkingai, su animacijomis parodyti iššokančias žinutes  (\ref{fig:ToastHost} paveikslėlis). Panaudota 1,5 konstanta, kad paslėpti iššokančią žinutę, kai kyla į viršų už navigacijos juostos. Standumo ir kiti animacijos parametrai parinkti, kad kuo labiau atitiktų Figma maketų animacijas.
+Buvo sukurtas \enquote{ToastHost}, skirtas tvarkingai, su animacijomis parodyti iššokančias žinutes  (\ref{fig:ToastHost} paveikslėlis). Panaudota 1,5 konstanta, kad paslėptų iššokančią žinutę, kai kyla į viršų už navigacijos juostos. Standumo ir kiti animacijos parametrai parinkti, kad kuo labiau atitiktų Figma maketų animacijas.
 
 \begin{figure}[htbp!]
     \centering
@@ -259,7 +259,7 @@ AnimatedVisibility(
 \end{figure}
 
 \newpage
-Kadangi \enquote{Jetpack Compose} komponentų tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Kadangi programėlė yra suprogramuota naudojantis daug fragmentų ir 1 \textit{activity}, iššokančios žinutės matysis visoje programėlėje. Galutinį rezultatą galima matyti \ref{fig:modelToastView} paveikslėlyje.
+Kadangi \enquote{Jetpack Compose} komponentų nepavyksta tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Programėlė suprogramuota naudojantis daug fragmentų ir 1 \textit{activity}, iššokančios žinutės matysis visoje programėlėje. Galutinį rezultatą galima matyti \ref{fig:modelToastView} paveikslėlyje.
 
 \begin{figure}[htbp!]
     \centering
@@ -274,7 +274,8 @@ class Toasts(private val context: Context) {
 
     private fun createToastView(rootView: ViewGroup) {
         val view = ComposeView(context).apply {
-        setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+        setViewCompositionStrategy(ViewCompositionStrategy
+        .DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 Column {
                     Toast(toastViewModel = toastViewModel)
