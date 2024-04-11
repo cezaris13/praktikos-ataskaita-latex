@@ -12,7 +12,23 @@ Pirmoji darbo diena prasidėjo nuo terminuotos sutarties pasirašymo. Po to supa
 
 \subsection{Praktikos užduotys}
 
-Šiame poskyryje pateiktos visos užduotys, kurios buvo atliktos praktikos metu. Kiekviena užduotis bus trumpai apibūdinta, įvardinant jos tikslą, įgyvendinimo būdus ir pasiektus rezultatus mobiliojoje programėlėje.
+Šiame poskyryje pateiktos visos užduotys, kurios buvo atliktos praktikos metu. Kiekviena užduotis bus trumpai apibūdinta, įvardinant jos tikslą, įgyvendinimo būdus ir pasiektus rezultatus mobiliojoje programėlėje. Programinis kodas, kuris yra pateiktas sekančiuose skyreliuose yra tik iškarpos, siekiant parodyti pagrindinį funkcionalumą.
+\subsubsection{Programinio kodo klaidos (\emph{angl. bugs})}
+\subsubsubsection{Programinio kodo klaidų radimas}
+Synchro Field projektas yra padalintas į 2 dalis: Android ir iOS. Praktikos metu, atliekant užduotis abiejose platformose, mobiliosios programėlės funkcionalumai turi būti kuo labiau suvienodinti. Testuojant savo atliktų užduočių pakeitimus, teko pastebėti tam tikrus neatitikimus vienoje iš platformų. Tiesa, įgūdis pastebėti kažkokius netikėtus pokyčius mobiliosiose programėlėse įgyjamas ilgiau dirbus su programėlės projektu, nes ne visus funkcionalumus galima iš karto pamatyti. Dažnai randamos klaidos išjungus interneto prieigą, pasukus prietaisą, ar išeinant iš programėlės ir grįžtant į ją atgal.
+
+
+Radus programinio kodo klaidas, \enquote{AzureDevOps} platformoje sukuriama užduotis, pažingsniui aprašoma, kaip galima atkurti klaidą prietaisuose, ką paspausti, kokio rezultato norima ir koks yra matomas. Parašoma kokioje projekto versijoje rasta klaida, ant kokių mobiliųjų įrenginių pastebėta klaida. Kasdieninio komandos susitikimo metu naujos klaidos yra aptariamos, nustatomos jų sunkumas, ar svarbu atlikti pakeitimus ir sutvarkyti klaidą, kiek galima greičiau. Po diskusijos užduotis priskiriama tam tikrai užduoties atlikimo sričiai.
+
+\subsubsubsection{Programinio kodo klaidų taisymas}
+Pasiėmus programinio kodo klaidos užduotį, pirmiausia identifikuojama sritis kur klaida įvyksta. Bandoma išsiaiškinti ar klaida įvyksta dėl specifinės mobiliojo prietaiso versijos ar įvyksta bet kokiu atveju. Jei klaidos nepavyksta pakartoti, kontaktuojama su testuotojais, kad klaida būtų atidžiau patikrinta. 
+
+Praktikos metu, daugiausia klaidų buvo sutvarkyta Pdf dokumento lange. Pateikiamas keletas klaidų kurios buvo sutvarkytos:
+\begin{enumerate}
+    \item Specifinės anotacijos, pasirinkus anotacijų sąraše pritraukia pdf dokumentą.
+    \item Suvienodinta ilgų tekstų trumpinimas į pabaigos pakeitimą į \enquote{...}.
+    \item Pasukus Pdf dokumentą trumpam matoma baltas stačiakampis ekrane.
+\end{enumerate}
 
 \subsubsection{Užduotis: \enquote{Tap to fullscreen on iOS}}
 
@@ -117,10 +133,12 @@ Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtuka
 
 Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus projekte naudojamus mygtukus (\ref{fig:buttonsView.png} priedo paveikslėlis). Kadangi mygtukų langas parašytas su SwiftUI, o patys mygtukai su UIKit funckijomis, reikėjo sukurti \textit{ButtonViewRepresentable}, kuris pasirinktą UIView komponento klasė supakuojama į SwiftUI komponentą, realizavus \textit{UIViewRepresentable} klasės funkcijas (\ref{fig:buttonViewRepresentable} paveikslėlis).
 
+Paveikslėlyje galima matyti kairėje esantį UIKit parašyto komponento SwiftUI apvalkalą (\emph{angl. wrapper}), kurio dėka, dešinėje nuotraukos pusėje galima iškart matyti net UIKit komponento pakeitimus, nepaleidus mobiliosios programėlės. Tai leidžia pagreitinti užduoties atlikimą, nes projekto kompiliavimas ir mobiliosios programėlės diegimas užtrunka daug laiko, didėjant projekto mąstui.
+
 \begin{figure} [htbp!]
     \centering
     \includegraphics[width=1\textwidth]{Images/iOSButtonRepresentable.png}
-    \caption{ButtonViewRepresentable failas}
+    \caption{Vieno mygtuko, parašyto UIKit karkasu atvaizdavimas SwiftUI komponente}
     \label{fig:buttonViewRepresentable}
 \end{figure}
 
