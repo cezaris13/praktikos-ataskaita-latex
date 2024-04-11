@@ -2,16 +2,19 @@
 Šį skyrių sudaro praktikos veiklos aprašymas ir jos įgyvendinimas.
 
 \subsection{Praktikos vietos gavimas}
-Norint gauti praktikos vietą \enquote{Bentley systems} reikėjo atlikti 3 su programavimu susijusias užduotis \enquote{Codility} aplinkoje. Jei šios užduotys buvo atliktos gerai, kandidatas kviečiamas antram etapui. Antrojo etapo metu \enquote{Codility} aplinkoje susipažinama su programuotojais, kurie stebės kandidato užduočių atlikimą, padės jei iškils problemų. Prieš pradedant atlikti naujas užduotis, diskutuojamos pirmo etapo užduotys, kas galėjo būti geriau, kodėl tam tikri kodo sprendimai buvo priimti. Po diskusijos pateikiamos pora užduočių, kandidatas bando jas išspręsti, užstrigus, programuotojai padeda. Užduotys olimpiadinio programavimo pobūdžio ir objektinio programavimo pagrindų patikrinimo.
+Norint gauti praktikos vietą \enquote{Bentley systems} reikėjo atlikti 3 su programavimu susijusias užduotis \enquote{Codility} aplinkoje. Jei šios užduotys buvo atliktos gerai, kandidatas kviečiamas antram etapui. Antrojo etapo metu \enquote{Codility} aplinkoje susipažinama su programuotojais, kurie stebės kandidato užduočių atlikimą, padės jei iškils problemų. Interviu stebintys programuotojai dažniausiai nėra susiję su komanda, kurioje bus atliekama darbo praktika. Prieš pradedant atlikti naujas užduotis, diskutuojamos pirmo etapo užduotys, kas galėjo būti geriau, kodėl tam tikri kodo sprendimai buvo priimti. Po diskusijos pateikiamos pora užduočių, kandidatas bando jas išspręsti, užstrigus, programuotojai padeda. Užduotys olimpiadinio programavimo pobūdžio ir objektinio programavimo pagrindų patikrinimo.
 
 Pirmoji darbo diena prasidėjo nuo terminuotos sutarties pasirašymo. Po to supažindino su komanda, mentoriumi, su kuriuo dirbsiu artimiausius 3 mėnesius. Komandą sudaro 15 narių: 3 testuotojai, 1 projektų vadovas ir 12 įvairaus lygio programuotojų. Kas 3 savaites susitinkama su mentoriumi pasidalinti su per 3 savaites įvykusiais įvykiais, atsiradusiomis problemomis, diskutuojama kaip jos galėtų būti išspręstos.
 
 % Praktikos veiklos aprašymas (vienas arba keli skyriai). Aprašomas praktikos užduoties įgyvendinimas (pvz., atlikti projektavimo ir/ar programavimo darbai, sukurtas modelis, priimti sprendimai ir pan.).
+
+\input{Sections/Technologies}
+
 \subsection{Praktikos užduotys}
 
 Šiame poskyryje pateiktos visos užduotys, kurios buvo atliktos praktikos metu. Kiekviena užduotis bus trumpai apibūdinta, įvardinant jos tikslą, įgyvendinimo būdus ir pasiektus rezultatus mobiliojoje programėlėje.
 
-\subsubsection{Tap to fullscreen on iOS}
+\subsubsection{Užduotis: \enquote{Tap to fullscreen on iOS}}
 
 Ši užduotis buvo skirta realizuoti programos lango pakeitimą į pilno ekrano režimą spustelėjus ant tuščios dokumente vietos, Pdf peržiūros lange. Užduotis buvo paskirstyta į 2 dalis: Android ir iOS. Pasirinkau realizuoti funkcionalumą iOS prietaisuose.
 
@@ -34,7 +37,7 @@ Reikalavimai atliekant užduotį:
 \end{enumerate}
 
 
-\enquote{Synchro Field} projekte norint peržiūrėti Pdf failus naudojame biblioteką \enquote{PdfTron} (\ref{fig:pdfViewController screen} paveikslėlis). Tačiau, \enquote{PdfTron} komponento navigacijos juosta yra atskirta nuo \enquote{Synchro field} navigacijos juostos (\ref{img:pdfViewController} paveikslėlis). Reikėjo pridėti pakeitimus funkcijai, kuri įvykdoma, kai \enquote{PdfTron} navigacijos juostos matomumas pasikeičia. \ref{fig:pdfTronCode} paveikslėlyje galime matyti, kad funkcijai pradėjus vykdymą, naudojama \textit{UIView.animate()} funkcija, kuri sklandžiai suanimuoja vartotojo sąsajos pasikeitimus. Patikrinama ar naujas funkcionalumas yra įjungtas su \enquote{feature flag}. Atliekami \enquote{Synchro field} navigacijos juostos apribojimų reikšmių pakeitimai. Animacijos trukmė parinkta 0,2 sekundės, siekiant sulyginti \enquote{PdfTron} ir \enquote{Synchro field} navigacijos laukų animacijų trukmes. Jei anotacijų sąrašas yra atidarytas (\ref{img:annotationList} paveikslėlis), sąrašas paslepiamas.
+\enquote{Synchro Field} projekte norint peržiūrėti Pdf failus naudojame biblioteką \enquote{PdfTron} (\ref{fig:pdfViewController screen} priedo paveikslėlis). Tačiau, \enquote{PdfTron} komponento navigacijos juosta yra atskirta nuo \enquote{Synchro field} navigacijos juostos (\ref{img:pdfViewController} priedo paveikslėlis). Reikėjo pridėti pakeitimus funkcijai, kuri įvykdoma, kai \enquote{PdfTron} navigacijos juostos matomumas pasikeičia. \ref{fig:pdfTronCode} paveikslėlyje galime matyti, kad funkcijai pradėjus vykdymą, naudojama \textit{UIView.animate()} funkcija, kuri sklandžiai suanimuoja vartotojo sąsajos pasikeitimus. Patikrinama ar naujas funkcionalumas yra įjungtas su \enquote{feature flag}. Atliekami \enquote{Synchro field} navigacijos juostos apribojimų reikšmių pakeitimai. Animacijos trukmė parinkta 0,2 sekundės, siekiant sulyginti \enquote{PdfTron} ir \enquote{Synchro field} navigacijos laukų animacijų trukmes. Jei anotacijų sąrašas yra atidarytas (\ref{img:annotationList} priedo paveikslėlis), sąrašas paslepiamas.
 
 Šio funkcionalumo programavimo metu teko ne tik rašyti kodą, bet ir išmokti naudotis \enquote{Storyboards}. \enquote{PdfTron} lange reikėjo pridėti papildomų apribojimų (\emph{angl. constraints}), siekiant padidinti Pdf komponento dydį.
 
@@ -43,24 +46,26 @@ Reikalavimai atliekant užduotį:
     \centering
 \begin{minted}[linenos,tabsize=1,breaklines]{swift}
 extension PdfTronViewController: PdfTronNavigationControllerDelegate {
-    func pdfTronNavigationController(didSetNavigationBarHidden isHidden: Bool) {
-        UIView.animate(withDuration: 0.2) { [weak self] in
+    // In this function we implement the PDFTronNavigationControllerDelegate protocol to handle the navigation bar visibility
+    func pdfTronNavigationController(didSetNavigationBarHidden isHidden: Bool) { 
+        UIView.animate(withDuration: 0.2) { [weak self] in // We use 0,2 seconds since it's the same duration as the PDF panel animation duration
             guard let self else { return }
-            if Features.isEnabled(DevelopmentFeatureFlag.pdfMarkupNative) {
+            if Features.isEnabled(DevelopmentFeatureFlag.pdfMarkupNative) { // We only need to handle the navigation bar visibility if the PDFMarkupNative feature is enabled
                 labeledBottomBarHeightConstraint.isActive = isHidden
             }
             setNavigationBarVisibility(isHidden)
             view.layoutIfNeeded()
         }
 
-        if let resizablePanelViewController, resizablePanelViewController.panelStatus != .closed {
-            resizablePanelViewController.shouldResize = !isHidden
+        // If the panel is not closed we need to toggle the panel visibility on tap, in other case the panel will be hidden regardless of the navigation bar visibility
+        if let resizablePanelViewController, resizablePanelViewController.panelStatus != .closed { 
             let panelHeight = isHidden ? 0 : resizablePanelViewController.heightHalfExpanded
             resizablePanelViewController.animatePanelToHeight(panelHeight)
         }
     }
 
     private func setNavigationBarVisibility(_ isHidden: Bool) {
+        // In this function we handle the navigation bar and status bar visibility using constraints and expand pdf view to fill the screen
         setStatusBarHidden(isHidden)
         if Features.isEnabled(DevelopmentFeatureFlag.pdfMarkupNative) {
             navigationBarTopConstraint.isActive = isHidden
@@ -74,9 +79,9 @@ extension PdfTronViewController: PdfTronNavigationControllerDelegate {
     \label{fig:pdfTronCode}
 \end{figure}
 
-
+\newpage
     
-\subsubsection{UIButton configuration}
+\subsubsection{Užduotis: \enquote{UIButton configuration}}
 Ši užduotis buvo skirta perkelti didžiąją dalį mygtukų iOS projekte į FieldUIComponents projektą ir suvienodinti stilių nustatymą naudojant \enquote{UIButton.Configuration}.
 
 Reikalavimai atliekant užduotį:
@@ -93,11 +98,13 @@ Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtuka
     \begin{minted}[linenos,tabsize=1,breaklines]{swift}
 @IBDesignable public class PrimaryButton: BaseUIButton {
     override func sharedInit() {
+        // First we create UIButton.Configuration instance with plain style, then apply needed style properties
         var configuration = UIButton.Configuration.plain()
         configuration.background.cornerRadius = 3
         configuration.background.backgroundColor = UIColor(fieldColor: .blueCerulean)
         configuration.titleLineBreakMode = .byTruncatingMiddle
         self.configuration = configuration
+        // Since the title font, color using the UIButton.Configuration resets on text change, we need set it differently
         setAttributedTitle(font: UIFont.openSans(ofSize: 14), foregroundColor: UIColor(fieldColor: .white))
     }
     ...
@@ -108,7 +115,7 @@ Pirmiausia buvo pereita per visą projektą, pažymėtos vietos, klasių mygtuka
 \end{figure}
 
 
-Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus projekte naudojamus mygtukus (\ref{fig:buttonsView.png} paveikslėlis). Kadangi mygtukų langas parašytas su SwiftUI, o patys mygtukai su UIKit funckijomis, reikėjo sukurti \textit{ButtonViewRepresentable}, kuris pasirinktą UIView komponento klasė supakuojama į SwiftUI komponentą, realizavus \textit{UIViewRepresentable} klasės funkcijas (\ref{fig:buttonViewRepresentable} paveikslėlis).
+Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus projekte naudojamus mygtukus (\ref{fig:buttonsView.png} priedo paveikslėlis). Kadangi mygtukų langas parašytas su SwiftUI, o patys mygtukai su UIKit funckijomis, reikėjo sukurti \textit{ButtonViewRepresentable}, kuris pasirinktą UIView komponento klasė supakuojama į SwiftUI komponentą, realizavus \textit{UIViewRepresentable} klasės funkcijas (\ref{fig:buttonViewRepresentable} paveikslėlis).
 
 \begin{figure} [htbp!]
     \centering
@@ -118,7 +125,7 @@ Taip pat buvo sukurtas FieldUIComponentsApp langas, kuriame galima rasti visus p
 \end{figure}
 
 \newpage
-\subsubsection{Custom Toast message on Android}
+\subsubsection{Užduotis: \enquote{Custom Toast message on Android}}
 Ši užduotis buvo skirta realizuoti UX sukurtą iššokančių žinučių (\emph{angl. Toast messages}) komponentą Android ir iOS operacinėse sistemose. 
 Buvo sukurti FieldUIComponents app langai, kuriuose galima įvairiais būdais ištestuoti iššokančias žinutes.
 
@@ -145,7 +152,7 @@ Reikalavimai atliekant užduotį:
     \end{enumerate}
 \end{enumerate}
 \newpage
-Iš pradžių buvo sukurtas iššokančios žinutės komponentas (\ref{fig:pill} paveikslėlis). Komponentui pritaikytos gestų atpažinimo, paspaudimo funkcionalumas, teksto sutrumpinimas (\ref{fig:pillCode} paveikslėlis).
+Iš pradžių buvo sukurtas iššokančios žinutės komponentas (\ref{fig:pill} priedo paveikslėlis). Komponentui pritaikytos gestų atpažinimo, paspaudimo funkcionalumas, teksto sutrumpinimas (\ref{fig:pillCode} paveikslėlis).
 
 \begin{figure}[htbp!]
     \centering
@@ -158,6 +165,7 @@ fun Pill(
     horizontalPadding: Dp = dimensionResource(id = R.dimen.toast_padding_horizontal),
     verticalPadding: Dp = dimensionResource(id = R.dimen.toast_padding_vertical)
 ) {
+    // We create a surface to clip the content of the pill, with UX defined padding, circular shape and background color
     Surface(
         modifier = modifier
             .padding(horizontal = horizontalPadding),
@@ -170,6 +178,7 @@ fun Pill(
                 .padding(horizontalPadding, verticalPadding),
             horizontalArrangement = Arrangement.Center
         ) {
+            // Text composable is set to display truncated text if it exceeds the width of the pill, with a max of 1 line
             Text(
                 text = text,
                 textAlign = TextAlign.Center,
@@ -200,19 +209,23 @@ class ToastViewModel : ViewModel() {
 
     private var pendingMessages: MutableSet<String> = mutableSetOf()
 
+    // This function handles the toast queue with defined duration and message
     fun showToast(
         message: String,
         duration: Long = 3000L
     ) {
+        // if the message is already in the queue, don't add it again
         if (pendingMessages.isEmpty() || pendingMessages.last() != message) {
             pendingMessages.add(message)
             viewModelScope.launchSafe {
                 mutex.withLock {
                     try {
+                        // Create cancellable coroutine to wait for the toast to be dismissed
                         return@launchSafe suspendCancellableCoroutine { continuation ->
                             _toastDataState.value = ToastData(message, duration, continuation)
                         }
                     } finally {
+                        // When toast is dismissed, remove it from the queue
                         _toastDataState.value = null
                         pendingMessages.remove(message)
                     }
@@ -233,18 +246,21 @@ Buvo sukurtas \enquote{ToastHost}, skirtas tvarkingai, su animacijomis parodyti 
     \centering
     \begin{minted}[linenos,tabsize=1,breaklines]{kotlin}
 ...
+// We define the spring animation for enter and exit animations, 1.5 constant is used to hide the toast behind the screen when dismissed
 val animationOffset: (Int) -> Int = { (heightToDropPx + it * 1.5).toInt() * -1 }
 val springAnimationSpec: FiniteAnimationSpec<IntOffset> = spring(
     dampingRatio = Spring.DampingRatioMediumBouncy,
     stiffness = Spring.StiffnessMedium
 )
 
+// Launch effect to show and hide the toast with the given duration
 LaunchedEffect(currentToastData) {
     setVisibility(true)
     delay(currentToastData.duration)
     setVisibility(false)
 }
 
+// Handle animated visibility of the toast using springAnimationSpec animation
 AnimatedVisibility(
     modifier = modifier.padding(top = heightToDrop),
     enter = slideInVertically(springAnimationSpec, initialOffsetY = animationOffset),
@@ -259,15 +275,18 @@ AnimatedVisibility(
 \end{figure}
 
 \newpage
-Kadangi \enquote{Jetpack Compose} komponentų nepavyksta tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Programėlė suprogramuota naudojantis daug fragmentų ir 1 \textit{activity}, iššokančios žinutės matysis visoje programėlėje. Galutinį rezultatą galima matyti \ref{fig:modelToastView} paveikslėlyje.
+Kadangi \enquote{Jetpack Compose} komponentų nepavyksta tiesiogiai integruoti į fragmentais pagrįstą programėlę, reikėjo sukurti papildomą klasę \enquote{Toasts} (\ref{fig:Toasts} paveikslėlis). Jame padavus tėvinį vaizdą (\emph{angl. root view}) programiniu būdu prideda \enquote{Jetpack Compose} komponentą. Programėlė suprogramuota naudojantis daug fragmentų ir 1 \textit{activity}, iššokančios žinutės matysis visoje programėlėje. Galutinį rezultatą galima matyti priedo \ref{fig:modelToastView} paveikslėlyje.
 
 \begin{figure}[htbp!]
     \centering
     \begin{minted}[linenos,tabsize=1,breaklines]{kotlin}
 class Toasts(private val context: Context) {
     private var view: View? = null
+
+    // Add toast view programmatically to the activities root layout by creating a ComposeView
     fun addToastView(activityRootLayout: ViewGroup?) {
         val rootView = activityRootLayout ?: return
+        // If the view is already added, return
         if (view == null)
             createToastView(rootView)
     }
@@ -286,7 +305,8 @@ class Toasts(private val context: Context) {
         this.view = view
         rootView.addView(view)
         rootView.bringChildToFront(view)
-        view.requestLayout()
+        // After the view is added, request a layout to make sure it is displayed
+        view.requestLayout() 
     }
 }
 \end{minted}
